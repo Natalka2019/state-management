@@ -24,7 +24,7 @@ function startApp() {
     const store = createStore(initialState, reducer);
 
     const getUsersTemplate = (users) => {
-        console.log("UPDATE USERS");
+        console.log("UPDATE USERS", users);
         if (!users.length) {
             return `
                 <p><em>No users.</em></p>
