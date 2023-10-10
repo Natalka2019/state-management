@@ -1,0 +1,11 @@
+export const COUNTER = {
+    INCREMENT: "INCREMENT",
+    DECREMENT: "DECREMENT",
+    RESET: "RESET"
+};
+
+export const USERS = {
+    GET_USERS: "GET_USERS",
+    GET_USERS_REPOS: "GET_USERS_REPOS",
+    CLEAR_USERS: "CLEAR_USERS"
+};
