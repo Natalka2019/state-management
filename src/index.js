@@ -34,10 +34,10 @@ function startApp() {
         return `
 		<ul>
 			${users.map(function (user) {
-                const reposList = user.reposList.map(repo => `<li>${repo}</li>`);
+                const reposList = user?.reposList?.map(repo => `<li class="repo">${repo}</li>`).join(" ");
             return `<li>
                 <h4>${user.login}</h4>
-                <ul>
+                <ul class="reposList">
                     ${reposList}
                 </ul>
             </li>`;
@@ -76,7 +76,7 @@ function startApp() {
     });
 
     getUsersButton.addEventListener("click", () => {
-        fetch('https://api.github.com/users', {
+        fetch('https://api.github.com/users?per_page=2', {
             headers: {
                 'Accept': 'application/vnd.github.v3+json'
             }
